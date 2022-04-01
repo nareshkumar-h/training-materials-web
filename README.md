@@ -85,6 +85,7 @@
 * Callback Functions - **A callback is a function passed as an argument to another function.**
 * Closure
 * Promise
+* async / await
 
 #### Ajax
 * XMLHttpRequest
