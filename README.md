@@ -1,10 +1,9 @@
-# training-materials-web
-
+# Training Notes (HTML/JS/CSS)
 
 ##### HTML5
 
 #### HTML Structure
-* html, head,  meta, title, body
+* DOCTYPE, html, head,  meta, title, body
 
 #### HTML Layout
 
@@ -18,7 +17,7 @@
 
 #### Forms
 * Forms - method (GET/POST)
-* Input Types - text, number,email, date, password, checkbox, radio, select, option, textarea, url
+* Input Types - text, number,email, date, password, checkbox, radio, select, option, textarea, url, textarea
 * Buttons - submit, reset, button
 
 #### Table
@@ -26,15 +25,24 @@
 
 #### Link
 * a
+* target = blank/self/parent
 
-#### Script
-* script
+#### Images
+* img
 
-#### Stylesheets
+#### Media 
+* audio
+* video
+
+#### IFrame
+* iframe
+
+#### List ( Unordered List / Ordered List  )
+* ol, ul, li
+  
+#### JavaScript ( internal/external )
+* script 
+
+#### Stylesheets ( inline / internal/ external )
 * link
-
-
-
-
-
-
+* style 
