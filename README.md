@@ -7,13 +7,14 @@
 
 #### HTML Layout
 
-* header
-* nav
-* aside
-* main
-* section
-* article
-* footer
+* **A semantic element clearly describes its meaning to both the browser and the developer.**
+* Examples of non-semantic elements: div and span - **Tells nothing about its content**.
+* Examples of semantic elements: form, table, and article - **Clearly defines its content**.
+
+* header, nav, aside, main, section, article,footer
+
+![image](https://user-images.githubusercontent.com/2763774/161204275-8bbb836c-8518-41c3-9a6f-f44afbb49ff6.png)
+
 
 #### Forms
 * Forms - method (GET/POST), action
@@ -80,8 +81,8 @@
 #### Functions
 * Define Function / Call Function / Return Value
 * Assigning Function to a variable
-* Self invoking function
-* Callback Functions
+* Self invoking function ( IIFE )  - **An Immediately-invoked Function Expression (IIFE ) is a way to execute functions immediately, as soon as they are created. The self-invoking function only runs once.**
+* Callback Functions - **A callback is a function passed as an argument to another function.**
 * Closure
 * Promise
 
@@ -93,8 +94,9 @@
 #### Events
 * Events - onclick, onchange, onsubmit etc..
 * EvenListener - addEventListener, removeEventListener
-* Event Bubbling
-* Event Capturing
+* Event Bubbling / Event Capturing - https://javascript.info/bubbling-and-capturing
+  * **Event Bubbling** - When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors. 
+* Event Stop Propogation ( event.stopImmediatePropagation() )
 
 #### DOM 
 * document.querySelector
