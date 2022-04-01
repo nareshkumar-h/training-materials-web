@@ -77,9 +77,18 @@ document.querySelector("#spinner").style.display="block";
 #### Task 7: Arrays
 ```js
 const departments = [ "CSE", "IT","EEE" ];
+```
+
+```js
 for(const dept of departments) {
   console.log(dept);
 }
+```
+
+```js
+departments.forEach(dept=> {
+  console.log(dept);
+});
 ```
 
 #### Task 8 : JSON
@@ -99,3 +108,29 @@ console.log("Name:" + firstName );
 localStorage.removeItem("NAME");
 localStorage.clear();
 ```
+
+#### Task 10: Ajax
+
+* Get the content 
+```html
+<div id="demo">
+<!-- get the content using ajax and insert it here -->
+</div>
+<button type="button" onclick="loadDoc()">Get Content</button>
+```
+
+```js
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax.txt");
+  xhttp.send();
+}
+```
+
+* Create file "ajax.txt" and add some contents.
