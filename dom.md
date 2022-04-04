@@ -42,32 +42,32 @@ document.getElementById("demo").innerHTML = "Hello World!";
 
 | Method  | Description  | 
 |---|---|
-| document.getElementById(id)	  | Find an element by element id  | 
-| document.getElementsByTagName(name)  |   Find elements by tag name | 
-|  document.getElementsByClassName(name) |  Find elements by class name | 
+| document.getElementById(id)	  | **Find an element by element id** | 
+| document.getElementsByTagName(name)  |  **Find elements by tag name** | 
+|  document.getElementsByClassName(name) |  **Find elements by class name** | 
 
 #### Changing HTML Elements
 
 | Property  | Description  | 
 |---|---|
-| element.innerHTML =  new html content	  | Change the inner HTML of an element  | 
-| element.attribute = new value	  | Change the attribute value of an HTML element  | 
-| element.style.property = new style	  | Change the style of an HTML element  | 
+| element.innerHTML =  new html content	  | **Change the inner HTML of an element**  | 
+| element.attribute = new value	  | **Change the attribute value of an HTML element** | 
+| element.style.property = new style	  | **Change the style of an HTML element**  | 
 
 
 | Method  | Description  | 
 |---|---|
-| element.setAttribute(attribute, value)	  | Change the attribute value of an HTML element  | 
+| element.setAttribute(attribute, value)	  | **Change the attribute value of an HTML element**  | 
 
 ##### Adding and Deleting Elements
 
 | Method  | Description  | 
 |---|---|
-| document.createElement(element)	  | Create an HTML element  | 
-| document.removeChild(element)	  | Remove an HTML element  | 
-| document.appendChild(element)	  | Add an HTML element  | 
-| document.replaceChild(new, old)	  | Replace an HTML element  | 
-| document.write(text)	  | Write into the HTML output stream  | 
+| document.createElement(element)	  | **Create an HTML element**  | 
+| document.removeChild(element)	  | **Remove an HTML element**  | 
+| document.appendChild(element)	  | **Add an HTML element**  | 
+| document.replaceChild(new, old)	  | **Replace an HTML element**  | 
+| document.write(text)	  | **Write into the HTML output stream**  | 
 
 
 ##### Task 1 : Create a div tag dynamically using JS 
@@ -84,4 +84,30 @@ document.getElementById("demo").innerHTML = "Hello World!";
 const div = document.createElement("div");
 div.textContent = "Success";
 document.body.appendChild(div);
+```
+
+## Event Listeners
+
+* The addEventListener() method allows you to add event listeners on any HTML DOM object.
+
+##### Task 1.1: Add an event listener that fires when a user resizes the window:
+
+```js
+window.addEventListener("resize", function(){
+  alert("Resize event called');
+});
+```
+
+##### Task 1.2: Add an event listener for a button element
+* html
+```html
+<button type="button" id="btn" > Click Me </button>
+```
+* js 
+
+```js
+const btn = document.querySelector("#btn");
+document.addEventListener('click', function(){
+   alert("Button clicked");
+});
 ```
