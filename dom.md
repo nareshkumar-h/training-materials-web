@@ -70,3 +70,18 @@ document.getElementById("demo").innerHTML = "Hello World!";
 | document.write(text)	  | Write into the HTML output stream  | 
 
 
+##### Task 1 : Create a div tag dynamically using JS 
+
+* Using HTML
+```html
+<body>
+   <div>Success</div>
+</body>
+```
+
+* Using JS
+```js
+const div = document.createElement("div");
+div.textContent = "Success";
+document.body.appendChild(div);
+```
