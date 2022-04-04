@@ -126,5 +126,10 @@ There are two ways of event propagation in the HTML DOM, bubbling and capturing.
 
 * **useCapture** The default value is **false**, which will use the bubbling propagation, when the value is set to **true**, the event uses the capturing propagation.
    
+```js
    addEventListener(event, function, false);
+```
+
+```js
+   btn.removeEventListener("mousemove", myFunction);
 ```
