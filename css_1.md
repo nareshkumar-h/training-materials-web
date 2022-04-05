@@ -145,7 +145,7 @@ p{
 
 #### Specificity
 
-* **A process of determining which CSS rule will be applied to an element. **
+* **A process of determining which CSS rule will be applied to an element.**
 * It actually determines which rules will take **precedence**. 
 * Inline style usually wins then ID then the class value (or pseudo-class or attribute selector), the universal selector (*) has no specificity. 
 * ID selectors have a higher specificity than attribute selectors
