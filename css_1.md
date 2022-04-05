@@ -110,8 +110,42 @@ p {
 ```
 
 
+##### What is Cascading ?
+
+* **Cascading** refers to the process of going through the style declarations and defining weight or importance to the styling rules that help the browser to select what rules have to be applied in times of conflict. 
+* The conflict here refers to multiple rules that are applicable to a particular HTML element. 
+* In such cases, we need to let the browser know what style needs to be applied to the element. 
+* This is done by cascading down the list of style declarations elements.
+
+* styles.css
+```
+p{
+    color:white;
+}
+```
+* index.html ( which includes style.css)
+```
+p{
+    color:black;
+}
+```
+
+* We have a conflict in color property here for the paragraph elements. 
+* Here, the browser just cascades down to identify what is the most recent and most specific style and applies that. 
+* Since we have the **color:black;** as the most specific declaration, the color black is applied to the paragraph elements.
+
+```
+p{
+    color:white !important;
+}
+```
+* **!important** ensures that the property has the **maximum weight in presence of other conflicting properties**.
 
 
+#### Specificity
 
-
-
+* **A process of determining which CSS rule will be applied to an element. **
+* It actually determines which rules will take **precedence**. 
+* Inline style usually wins then ID then the class value (or pseudo-class or attribute selector), the universal selector (*) has no specificity. 
+* ID selectors have a higher specificity than attribute selectors
+```
