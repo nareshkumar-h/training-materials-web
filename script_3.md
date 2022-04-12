@@ -1,6 +1,6 @@
 ## JavaScript Object Oriented Programming - Inheritance
 
-* Using **__proto__** we can able to extend inheritance.
+* Using **```__proto__```** we can able to extend inheritance.
 
 ##### Parent - Animal
 ```js
