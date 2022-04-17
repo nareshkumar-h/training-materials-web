@@ -5,6 +5,9 @@
 
 * File => New => Other => Dynamic Web Project => choose web.xml
 
+![image](https://user-images.githubusercontent.com/2763774/163707867-d7f4219e-2837-4ea1-8aa9-86d1442b3734.png)
+![image](https://user-images.githubusercontent.com/2763774/163707873-8c06fa01-0f65-4995-9133-758be432e157.png)
+
 
 ##### Create Maven Web Project
 
@@ -47,19 +50,36 @@ public class RegisterServlet extends HttpServlet {
 }
 ```
 * Using XML configuration (web.xml)
+
+```xml
+<servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.naresh.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+```
+
+#### Load Servlet on Startup
+* The load-on-startup element of web-app loads the servlet at the time of deployment or server start if value is positive. 
+* It is also known as **pre initialization of servlet**.
+
 ```xml
  <servlet>  
-   <servlet-name>register</servlet-name>  
+   <servlet-name>RegisterServlet</servlet-name>  
    <servlet-class>com.naresh.RegisterServlet</servlet-class>  
    <load-on-startup>0</load-on-startup>  
   </servlet>  
   
   <servlet>  
-   <servlet-name>l</servlet-name>  
-   <servlet-class>com.javatpoint.SecondServlet</servlet-class>  
+   <servlet-name>LoginServlet</servlet-name>  
+   <servlet-class>com.naresh.RegisterServlet</servlet-class>  
    <load-on-startup>1</load-on-startup>  
   </servlet>  
 ```
+
 
 ##### Servlet Methods
 
