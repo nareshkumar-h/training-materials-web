@@ -94,6 +94,11 @@ if(session==null){
 }
 ```
 
+* **Get SESSIONID**
+```java
+String sessionId = session.getId();
+```
+
 * **Add Data in Session**
 
 ```java
