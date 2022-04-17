@@ -11,7 +11,32 @@
 * File => New => Other => Maven Project => webapp
 
 ##### Servlet Jars :
-* servlet-api.jar
+* servlet-api.jar ( https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api/4.0.1 )
+* pom.xml
+```xml
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>4.0.1</version>
+    <scope>provided</scope>
+</dependency>
+```
+#### Client/Server
+![image](https://user-images.githubusercontent.com/2763774/163707483-adb0dfb9-f059-4bfa-a8cb-b4546c1d1953.png)
+
+## Servlet
+
+![image](https://user-images.githubusercontent.com/2763774/163707383-1de3573c-8260-44fe-8e7d-d46a2b99575f.png)
+
+
+#### Advantages of Servlet
+
+* The web container creates threads for handling the multiple requests to the Servlet. Threads have many benefits over the Processes such as they share a common memory area, lightweight, cost of communication between the threads are low. 
+
+  * **Better performance**: because it creates a thread for each request, not process.
+  * **Portability**: because it uses Java language.
+  * **Robust**: JVM manages Servlets, so we don't need to worry about the memory leak, garbage collection, etc.
+  * **Secure**: because it uses java language.
 
 ##### Create Servlet
 * RegisterServlet
@@ -20,6 +45,20 @@
 public class RegisterServlet extends HttpServlet {
 
 }
+```
+* Using XML configuration (web.xml)
+```xml
+ <servlet>  
+   <servlet-name>register</servlet-name>  
+   <servlet-class>com.naresh.RegisterServlet</servlet-class>  
+   <load-on-startup>0</load-on-startup>  
+  </servlet>  
+  
+  <servlet>  
+   <servlet-name>l</servlet-name>  
+   <servlet-class>com.javatpoint.SecondServlet</servlet-class>  
+   <load-on-startup>1</load-on-startup>  
+  </servlet>  
 ```
 
 ##### Servlet Methods
