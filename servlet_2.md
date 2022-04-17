@@ -135,3 +135,49 @@ session.invalidate();
 ```java
 session.setMaxInactiveInterval(300); // session timeout in seconds ( 300 seconds = 5 mins)
 ```
+
+#### Cookies
+* Cookies are text files that are sent by Servlet to the Web Browsers and are used to track various information's about the user.
+
+* **Task 1: Add data in Cookie**
+```java
+Cookie cookie = new Cookie("LOGGED_IN_USER", "naresh@gmail.com");			
+response.addCookie(cookie);
+```
+
+* **Task 2: Get All Cookies**
+
+```java
+Cookie[] cookies = request.getCookies();
+for (Cookie cookie : cookies) {
+	System.out.println(cookie.getName() +"-" + cookie.getValue() +"-" + cookie.getMaxAge());
+}
+```
+
+* **Task 3: Cookie Expiry ( Max-Age ) **
+   * Set the cookie "Max-Age" attribute. 
+   * A positive value indicates when the cookie should expire relative to the current time. 
+   * A value of 0 means the cookie should expire immediately. 
+   * A negative value results in no "Max-Age" attribute in which case the cookie is removed when the browser is closed.
+
+
+```java
+cookie.setMaxAge(60 * 60 * 24 * 30); // 30 days
+```
+
+
+```java
+cookie.setMaxAge(0); //cookie should expire immediately.
+```
+
+```java
+cookie.setMaxAge(-1); // Negative value - cookie is removed when the browser is closed.
+```
+
+* **Advantages/Drawbacks of Cookies**
+   *  **Advantage of Cookies**:
+      * Simplest technique of maintaining the state.
+      * Cookies are maintained at client side.
+   * **Disadvantage of Cookies**
+      * It will not work if cookie is disabled from the browser.
+      * Only textual information can be set in Cookie object.
